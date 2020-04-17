@@ -13,10 +13,10 @@ $(document).ready(function(){
 
         if ( sex.toLowerCase() == 'm' ) {
           $('img').attr('src', 'assets/images/male.png');
-          $('#sex').text('male');
+          $('#sex').text('homme');
         } else {
           $('img').attr('src', 'assets/images/female.png');
-          $('#sex').text('female');
+          $('#sex').text('femme');
         }
 
         $('#name').text(userData.firstname + ' ' + userData.lastname);
@@ -30,14 +30,14 @@ $(document).ready(function(){
             var type = licenseData[key].type;
 
             if ( type == 'drive_bike') {
-              type = 'bike';
+              type = 'moto';
             } else if ( type == 'drive_truck' ) {
-              type = 'truck';
+              type = 'camion';
             } else if ( type == 'drive' ) {
-              type = 'car';
+              type = 'voiture';
             }
 
-            if ( type == 'bike' || type == 'truck' || type == 'car' ) {
+            if ( type == 'moto' || type == 'camion' || type == 'voiture' ) {
               $('#licenses').append('<p>'+ type +'</p>');
             }
           });
